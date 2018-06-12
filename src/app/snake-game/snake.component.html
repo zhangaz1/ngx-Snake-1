@@ -1,0 +1,17 @@
+<div class="grid-container">
+
+  <!-- Row = Y -->
+  <div class="row" *ngFor="let row of rows; let y = index">
+
+    <!-- Column = X -->
+    <div class="column"
+         *ngFor="let column of columns; let x = index"
+         [style.background-color]="colorGrid(x, y)"
+    >
+    </div>
+  </div>
+</div>
+
+<div class="score">
+  Your Score: {{ score }}
+</div>
